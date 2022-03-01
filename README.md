@@ -1,2 +1,14 @@
 # Codigo2
-{{exec "remind" "30s" "__**Patata de prueba!**__ ⛏"}} {{ $avatar := (joinStr "" "https://cdn.discordapp.com/avatars/" (toString .User.ID) "/" .User.Avatar ".png") }} {{ $embed := cembed  "title" "&lt;:Aaaa_PT:881688742706966578> Recordatorio Activado de Prueba" "description" "**&lt;a:KonaDance_PT:881807395066634270> En** `30s` **te recuerdo usar Prueba** `!mine`"  "color" 4645612  "author" (sdict "name" "Potatio y sus Patatas Fritas🍟" "url" "https://www.youtube.com/c/PotatioYT" "icon_url" "https://cdn.discordapp.com/icons/325393764141236224/494603a37de6f271985ee40fbefe9929.png")      "thumbnail" (sdict "url" $avatar)      "footer" (sdict "text" "Te amo ❤️" "icon_url" "https://c.tenor.com/QwaWyHYzh8kAAAAC/ted-kisses.gif")      "timestamp" .Message.Timestamp }} {{sendMessage nil $embed}} {{deleteResponse 0}}
+{{exec "remind" "30s" "__**Patata de prueba!**__ ⛏"}}
+{{ $avatar := (joinStr "" "https://cdn.discordapp.com/avatars/" (toString .User.ID) "/" .User.Avatar ".png") }}
+{{ $embed := cembed
+ "title" "<:Aaaa_PT:881688742706966578> Recordatorio Activado de Prueba"
+"description" "**<a:KonaDance_PT:881807395066634270> En** `30s` **te recuerdo usar Prueba** `!mine`" 
+"color" 4645612 
+"author" (sdict "name" "Potatio y sus Patatas Fritas🍟" "url" "https://www.youtube.com/c/PotatioYT" "icon_url" "https://cdn.discordapp.com/icons/325393764141236224/494603a37de6f271985ee40fbefe9929.png") 
+    "thumbnail" (sdict "url" $avatar) 
+    "footer" (sdict "text" "Te amo ❤️" "icon_url" "https://c.tenor.com/QwaWyHYzh8kAAAAC/ted-kisses.gif") 
+    "timestamp" .Message.Timestamp
+}}
+{{sendMessage nil $embed}}
+{{deleteResponse 0}}
