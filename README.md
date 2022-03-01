@@ -1,4 +1,3 @@
-# Codigo2
 {{exec "remind" "30s" "__**Patata de prueba!**__ ⛏"}}
 {{ $avatar := (joinStr "" "https://cdn.discordapp.com/avatars/" (toString .User.ID) "/" .User.Avatar ".png") }}
 {{ $embed := cembed
@@ -7,7 +6,7 @@
 "color" 4645612 
 "author" (sdict "name" "Potatio y sus Patatas Fritas🍟" "url" "https://www.youtube.com/c/PotatioYT" "icon_url" "https://cdn.discordapp.com/icons/325393764141236224/494603a37de6f271985ee40fbefe9929.png") 
     "thumbnail" (sdict "url" $avatar) 
-    "footer" (sdict "text" "Te amo ❤️" "icon_url" "https://c.tenor.com/QwaWyHYzh8kAAAAC/ted-kisses.gif") 
+    "Image" (sdict "text" "Te amo ❤️" "url" "https://c.tenor.com/QwaWyHYzh8kAAAAC/ted-kisses.gif") 
     "timestamp" .Message.Timestamp
 }}
 {{sendMessage nil $embed}}
